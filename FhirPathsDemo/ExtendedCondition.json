@@ -1,0 +1,789 @@
+{
+  "resourceType": "Condition",
+  "assertedDate": "2023-06-06T00:00:00+01:00",
+  "asserter": {
+    "display": "ATTIA, Magdy (Mr) Consultant General & Transplant Surgeon - Surgery",
+    "identifier": {
+      "system": "https://fhir.leedsth.nhs.uk/Id/ppm-contact-guid",
+      "value": "881123B3-0EBE-DD11-A2AB-001E68862219"
+    },
+    "reference": "#52374A7B-950C-4C1D-ABFF-5B35B86A8B3B"
+  },
+  "clinicalStatus": "active",
+  "code": {
+    "coding": [
+      {
+        "code": "254837009",
+        "display": "Malignant neoplasm of breast",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "contained": [
+    {
+      "resourceType": "Practitioner",
+      "extension": [
+        {
+          "id": "AED2E8F4-EE22-4D7D-A8E7-620181C8C1B3",
+          "url": "https://fhir.leedsth.nhs.uk/Id/contact-address",
+          "valueAddress": {
+            "extension": [
+              {
+                "id": "4975AA21-8392-4A07-AB1F-1A5FA57DB7AE",
+                "url": "https://fhir.leedsth.nhs.uk/Id/contact-address-id",
+                "valueIdentifier": {
+                  "system": "https://fhir.leedsth.nhs.uk/Id/contact-address-id",
+                  "value": "62B114AB-0EBE-DD11-A2AB-001E68862219"
+                }
+              }
+            ],
+            "text": "St James's University Hospital, Beckett Street, Leeds, LS9 7TF"
+          }
+        },
+        {
+          "id": "C04F8476-0B93-4A97-A0A6-73E44222DD74",
+          "url": "https://fhir.leedsth.nhs.uk/Id/contact-specialty",
+          "valueString": "Surgery"
+        }
+      ],
+      "id": "52374A7B-950C-4C1D-ABFF-5B35B86A8B3B",
+      "identifier": [
+        {
+          "system": "https://fhir.nhs.uk/Id/sds-user-id",
+          "value": "C4654881"
+        },
+        {
+          "system": "https://fhir.leedsth.nhs.uk/Id/ppm-contact-id",
+          "value": "20020010"
+        },
+        {
+          "system": "https://fhir.leedsth.nhs.uk/Id/ppm-contact-guid",
+          "value": "881123B3-0EBE-DD11-A2AB-001E68862219"
+        }
+      ],
+      "name": [
+        {
+          "text": "ATTIA, Magdy (Mr) Consultant General & Transplant Surgeon - Surgery>"
+        }
+      ]
+    },
+    {
+      "resourceType": "QuestionnaireResponse",
+      "contained": [
+        {
+          "resourceType": "Questionnaire",
+          "id": "5AB08AF1-6FBE-4F60-BD11-25F453F33A85",
+          "item": [
+            {
+              "item": [
+                {
+                  "linkId": "metastatic-type",
+                  "text": "Metastatic Type",
+                  "type": "choice"
+                },
+                {
+                  "linkId": "metastatic-site",
+                  "text": "Metastatic Site",
+                  "type": "choice"
+                }
+              ],
+              "linkId": "diagnosis-metastatic-type-repeat-metastatic-grid",
+              "repeats": true,
+              "type": "group"
+            }
+          ],
+          "name": "diagnosis-metastatic-type",
+          "status": "active",
+          "title": "Diagnosis Metastatic Type",
+          "version": "1"
+        }
+      ],
+      "id": "CAD4C826-480A-41A8-9174-D62416C228B9",
+      "item": [
+        {
+          "item": [
+            {
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "02",
+                    "display": "regional"
+                  }
+                }
+              ],
+              "linkId": "metastatic-type"
+            },
+            {
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "01 02",
+                    "display": "Skin, Bone"
+                  }
+                }
+              ],
+              "linkId": "metastatic-site"
+            }
+          ],
+          "linkId": "diagnosis-metastatic-type-repeat-metastatic-grid"
+        }
+      ],
+      "questionnaire": {
+        "reference": "#5AB08AF1-6FBE-4F60-BD11-25F453F33A85"
+      },
+      "status": "completed"
+    },
+    {
+      "resourceType": "QuestionnaireResponse",
+      "contained": [
+        {
+          "resourceType": "Questionnaire",
+          "id": "93E48215-4735-4C8D-A791-09AAF040293C",
+          "item": [
+            {
+              "linkId": "diagnosis",
+              "text": "Diagnosis",
+              "type": "choice"
+            },
+            {
+              "linkId": "morphology",
+              "text": "Morphology",
+              "type": "choice"
+            },
+            {
+              "linkId": "tumor-laterality",
+              "text": "Tumor Laterality",
+              "type": "choice"
+            },
+            {
+              "linkId": "topography",
+              "text": "Topography",
+              "type": "choice"
+            },
+            {
+              "linkId": "grade-of-differentiation",
+              "text": "Grade Of Differentiation",
+              "type": "choice"
+            },
+            {
+              "linkId": "basis-of-diagnosis",
+              "text": "Basis Of Diagnosis",
+              "type": "choice"
+            }
+          ],
+          "name": "diagnosis-oncology-core-1",
+          "status": "active",
+          "title": "Diagnosis Oncology Core 1",
+          "version": "1"
+        }
+      ],
+      "id": "6F62F467-BC01-4B10-A1A0-B5C9DC5C444B",
+      "item": [
+        {
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "progression",
+                "display": "Progression"
+              }
+            }
+          ],
+          "linkId": "diagnosis"
+        },
+        {
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "41919003",
+                "display": "Juvenile carcinoma of the breast"
+              }
+            }
+          ],
+          "linkId": "morphology"
+        },
+        {
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "255549009",
+                "display": "Anterior"
+              }
+            }
+          ],
+          "linkId": "tumor-laterality"
+        },
+        {
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "49058007",
+                "display": "Structure of central portion of breast"
+              }
+            }
+          ],
+          "linkId": "topography"
+        },
+        {
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "G2",
+                "display": "2 - Medium/ Mod Diff"
+              }
+            }
+          ],
+          "linkId": "grade-of-differentiation"
+        },
+        {
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "6",
+                "display": "Histology - metastasis"
+              }
+            }
+          ],
+          "linkId": "basis-of-diagnosis"
+        }
+      ],
+      "questionnaire": {
+        "reference": "#93E48215-4735-4C8D-A791-09AAF040293C"
+      },
+      "status": "completed"
+    },
+    {
+      "resourceType": "QuestionnaireResponse",
+      "contained": [
+        {
+          "resourceType": "Questionnaire",
+          "id": "66582AB2-8A6A-4452-8415-71A5EB7D86DB",
+          "item": [
+            {
+              "linkId": "date-patient-informed",
+              "text": "Date Patient Informed",
+              "type": "date"
+            },
+            {
+              "linkId": "patient-informed-practitioner",
+              "text": "Patient Informed Practitioner",
+              "type": "choice"
+            },
+            {
+              "linkId": "patient-informed-practitioner-address",
+              "text": "Patient Informed Practitioner Address",
+              "type": "choice"
+            },
+            {
+              "linkId": "how-patient-was-told",
+              "text": "How Patient Was Told",
+              "type": "choice"
+            }
+          ],
+          "name": "diagnosis-patient-informed",
+          "status": "active",
+          "title": "Diagnosis Patient Informed",
+          "version": "1"
+        }
+      ],
+      "id": "FC314160-312C-49FD-AC07-FEE8D24018D9",
+      "item": [
+        {
+          "answer": [
+            {
+              "valueDate": "2023-06-13"
+            }
+          ],
+          "linkId": "date-patient-informed"
+        },
+        {
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "881123B3-0EBE-DD11-A2AB-001E68862219",
+                "display": "ATTIA, Magdy (Mr) Consultant General & Transplant Surgeon - Surgery>"
+              }
+            }
+          ],
+          "linkId": "patient-informed-practitioner"
+        },
+        {
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "62B114AB-0EBE-DD11-A2AB-001E68862219",
+                "display": "St James's University Hospital, Beckett Street, Leeds, LS9 7TF"
+              }
+            }
+          ],
+          "linkId": "patient-informed-practitioner-address"
+        },
+        {
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "Outpatient Appointment or Diagnostic Clinic (Face to Face)"
+              }
+            }
+          ],
+          "linkId": "how-patient-was-told"
+        }
+      ],
+      "questionnaire": {
+        "reference": "#66582AB2-8A6A-4452-8415-71A5EB7D86DB"
+      },
+      "status": "completed"
+    },
+    {
+      "resourceType": "QuestionnaireResponse",
+      "contained": [
+        {
+          "resourceType": "Questionnaire",
+          "id": "6A34702A-A5FB-40A4-B788-95F6FEE1C581",
+          "item": [
+            {
+              "linkId": "performance-status",
+              "text": "Performance Status",
+              "type": "choice"
+            }
+          ],
+          "name": "diagnosis-performance-status",
+          "status": "active",
+          "title": "Diagnosis Performance Status",
+          "version": "1"
+        }
+      ],
+      "id": "E947E04B-497A-4627-8965-9200789F7B39",
+      "item": [
+        {
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "1",
+                "display": "1 - WHO - Light Work"
+              }
+            }
+          ],
+          "linkId": "performance-status"
+        }
+      ],
+      "questionnaire": {
+        "reference": "#6A34702A-A5FB-40A4-B788-95F6FEE1C581"
+      },
+      "status": "completed"
+    },
+    {
+      "status": "completed",
+      "resourceType": "QuestionnaireResponse",
+      "questionnaire": {},
+      "contained": [
+        {
+          "version": "1",
+          "name": "diagnosis-oncology-core-4",
+          "title": "Diagnosis Oncology Core 4",
+          "status": "active",
+          "resourceType": "Questionnaire",
+          "item": [
+            {
+              "linkId": "menopausal-status",
+              "text": "Menopausal Status",
+              "type": "string"
+            },
+            {
+              "linkId": "adult-comorbidity-evaluation27-score",
+              "text": "Adult Comorbidity Evaluation 27 Score",
+              "type": "choice"
+            },
+            {
+              "linkId": "tobacco-smoking-status",
+              "text": "Tobacco Smoking Status",
+              "type": "choice"
+            },
+            {
+              "linkId": "germline-genetic-testing-offered",
+              "text": "Germline Genetic Testing Offered",
+              "type": "boolean"
+            },
+            {
+              "linkId": "diagnosis-oncology-core-4-repeat-germline-genetic-testing-repeatable-grid",
+              "type": "group",
+              "repeats": true,
+              "item": [
+                {
+                  "linkId": "biomarker-test",
+                  "text": "Biomarker Test",
+                  "type": "choice"
+                },
+                {
+                  "linkId": "result",
+                  "text": "Result",
+                  "type": "choice"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "item": [
+        {
+          "linkId": "menopausal-status",
+          "answer": [
+            {
+              "valueString": "3"
+            }
+          ]
+        },
+        {
+          "linkId": "adult-comorbidity-evaluation27-score",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Moderate"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "tobacco-smoking-status",
+          "answer": [
+            {
+              "valueCoding": {
+                "code": "2",
+                "display": "Ex-smoker"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "germline-genetic-testing-offered",
+          "answer": [
+            {
+              "valueBoolean": true
+            }
+          ]
+        },
+        {
+          "linkId": "diagnosis-oncology-core-4-repeat-germline-genetic-testing-repeatable-grid",
+          "item": [
+            {
+              "linkId": "biomarker-test",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "01",
+                    "display": "ALK Fusions"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "result",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "02",
+                    "display": "Positive"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "diagnosis-oncology-core-4-repeat-germline-genetic-testing-repeatable-grid",
+          "item": [
+            {
+              "linkId": "biomarker-test",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "18",
+                    "display": "ROS Fusions"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "result",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "02",
+                    "display": "Positive"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "diagnosis-oncology-core-4-repeat-germline-genetic-testing-repeatable-grid",
+          "item": [
+            {
+              "linkId": "biomarker-test",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "19",
+                    "display": "PD-L1"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "result",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "28",
+                    "display": "High (>=50%)"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "diagnosis-oncology-core-4-repeat-germline-genetic-testing-repeatable-grid",
+          "item": [
+            {
+              "linkId": "biomarker-test",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "10",
+                    "display": "KRAS Mutation"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "result",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "02",
+                    "display": "Positive"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "diagnosis-oncology-core-4-repeat-germline-genetic-testing-repeatable-grid",
+          "item": [
+            {
+              "linkId": "biomarker-test",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "991",
+                    "display": "NTRK Fusions"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "result",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "83",
+                    "display": "Fusion gene 3 positive"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "diagnosis-oncology-core-4-repeat-germline-genetic-testing-repeatable-grid",
+          "item": [
+            {
+              "linkId": "biomarker-test",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "990",
+                    "display": "MET"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "result",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "22",
+                    "display": "Fusion"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "diagnosis-oncology-core-4-repeat-germline-genetic-testing-repeatable-grid",
+          "item": [
+            {
+              "linkId": "biomarker-test",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "06A",
+                    "display": "EGFR Sensitising Mutation"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "result",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "02",
+                    "display": "Positive"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "diagnosis-oncology-core-4-repeat-germline-genetic-testing-repeatable-grid",
+          "item": [
+            {
+              "linkId": "biomarker-test",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "06B",
+                    "display": "EGFR Resistance Mutation"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "result",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "02",
+                    "display": "Positive"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "diagnosis-oncology-core-4-repeat-germline-genetic-testing-repeatable-grid",
+          "item": [
+            {
+              "linkId": "biomarker-test",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "07",
+                    "display": "HER2 Status"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "result",
+              "answer": [
+                {
+                  "valueCoding": {
+                    "code": "32",
+                    "display": "3+"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "detail": [
+        {
+          "reference": "QuestionnaireResponse/CAD4C826-480A-41A8-9174-D62416C228B9"
+        }
+      ]
+    },
+    {
+      "detail": [
+        {
+          "reference": "QuestionnaireResponse/6F62F467-BC01-4B10-A1A0-B5C9DC5C444B"
+        }
+      ]
+    },
+    {
+      "detail": [
+        {
+          "reference": "QuestionnaireResponse/FC314160-312C-49FD-AC07-FEE8D24018D9"
+        }
+      ]
+    },
+    {
+      "detail": [
+        {
+          "reference": "QuestionnaireResponse/823D7D0F-3B87-46B8-82FB-04B41E695D31"
+        }
+      ]
+    },
+    {
+      "detail": [
+        {
+          "reference": "QuestionnaireResponse/E947E04B-497A-4627-8965-9200789F7B39"
+        }
+      ]
+    }
+  ],
+  "extension": [
+    {
+      "url": "https://fhir.leedsth.nhs.uk/Extension/ResponsibleOrganisationExtension",
+      "valueReference": {
+        "display": "Pointer to which organisation is responsible for having entered the data.",
+        "reference": "Organization/6954463B-4B18-4594-AFA1-C140D69DC100"
+      }
+    },
+    {
+      "id": "A6DCA56C-3D0F-4F51-B283-95E02866B694",
+      "url": "https://fhir.leedsth.nhs.uk/ValueSet/diagnosis-onset-date-estimated-1",
+      "valueBoolean": true
+    }
+  ],
+  "id": "E87845F2-B917-4941-81D5-C08931823ECD",
+  "identifier": [
+    {
+      "system": "https://fhir.leedsth.nhs.uk/ppm-DiagnosisIdentifier",
+      "value": "AA628291-B840-EE11-80D2-0025B5011BCC"
+    }
+  ],
+  "note": [
+    {
+      "text": "Checking that primary with advanced <br/>disease is switched off<br/>again"
+    }
+  ],
+  "onsetDateTime": "2023-06-06T00:00:00+01:00",
+  "severity": {
+    "coding": [
+      {
+        "code": "24484000",
+        "display": "Severe",
+        "system": "http://snomed.info/sct"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/BB2593F9-C644-4656-8AF4-2D0DD4E2F82A"
+  },
+  "verificationStatus": "refuted"
+}
