@@ -52,23 +52,35 @@ internal static class FhirPathsDemo
         // We can use where clauses to filter
         var morphologyPath = "contained.QuestionnaireResponse.item.where(linkId = 'morphology').answer.value.code";
         var morphology = typedElement.Scalar(morphologyPath);
+        
+        var morphologyQuestionnaireResponsePath = "contained.QuestionnaireResponse.item.where(linkId = 'morphology').exists()";
+        var morphologyExists = typedElement.IsTrue(morphologyQuestionnaireResponsePath);
 
         // Use a select statement when we expect to access a collection
         var practitionerIdentifierPath = "contained.Practitioner.identifier";
         var practitionerIdentifiers = typedElement.Select(practitionerIdentifierPath);
 
         Console.WriteLine($"ConditionCode: {conditionCode}");
+        Console.WriteLine($"Morphology Exists: {morphologyExists}");
         Console.WriteLine($"Morphology: {morphology}");
         Console.WriteLine(string.Empty);
 
         Console.WriteLine("Practitioner Identifiers");
         Console.WriteLine("---------------------------------------------------------------");
 
-        // Iterating a collection of identifiers xto get their associated values
+        // Iterating a collection of identifiers to get their associated values
         foreach (var identifier in practitionerIdentifiers)
         {
+            var identifierHasAValue = identifier.IsTrue("value.hasValue()");
+
+            Console.WriteLine($"Identifier Has A Value: {identifierHasAValue}");
             Console.WriteLine($"System: {identifier.Scalar("system")}");
             Console.WriteLine($"Value: {identifier.Scalar("value")}");
+
+            // Create a POCO and access properties directly
+            var identifierPoco = identifier.ToPoco<Identifier>();
+            Console.WriteLine($"System: {identifierPoco.System}");
+            Console.WriteLine($"Value: {identifier.Value}");
         }
 
         // You can call ToPoco<T> to cast to an appropriate type should you wish.
